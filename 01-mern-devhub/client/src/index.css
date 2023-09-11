@@ -1,0 +1,196 @@
+/* =============================
+📦 Font Family
+============================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* =============================
+📣 RESET
+============================= */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: revert;
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+pre {
+  all: revert;
+}
+
+::placeholder {
+  color: unset;
+}
+
+::marker {
+  content: "";
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+  all: revert;
+}
+
+
+/* =============================
+📣 GLOBAL
+============================= */
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+html, body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#root,
+#app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* =============================
+📦 Tailwind directives
+============================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+  }
+
+  .layout {
+    @apply grid grid-rows-[auto_1fr_auto] min-h-screen font-sans font-normal
+  }
+
+  .header {
+    @apply p-3 bg-slate-700 text-white lg:py-5 border-b-2 border-b-emerald-600
+  }
+
+  .menu {
+    @apply flex flex-wrap items-center justify-center gap-4 font-medium lg:gap-6;
+  }
+
+  .link {
+    @apply transition-all hover:text-orange-300;
+  }
+
+  .link-flex {
+    @apply transition-all hover:text-orange-300 flex items-center gap-0.5
+  }
+
+  .link-flex.active {
+    @apply text-orange-300;
+  }
+
+  .main {
+    @apply bg-slate-100
+  }
+
+  .footer {
+    @apply grid place-items-center p-3 bg-slate-700 text-white lg:py-5 border-t-2 border-t-emerald-600
+  }
+
+  .index-page {
+    @apply relative min-h-full grid place-items-center p-3 text-center text-white bg-[url("assets/images/bg-index.jpg")] bg-cover bg-center before:absolute before:w-full before:h-full before:top-0 before:right-0 before:bottom-0 before:left-0 before:bg-neutral-900/60
+  }
+
+  .button {
+    @apply inline-flex justify-center border items-center gap-1.5 py-2.5 px-3.5 font-medium rounded transition-all disabled:bg-slate-300 disabled:pointer-events-none disabled:opacity-60
+  }
+
+  .button-default {
+    @apply bg-white text-slate-600 hover:bg-emerald-400 hover:text-white
+  }
+
+  .button-primary {
+    @apply bg-emerald-400 hover:bg-white hover:text-slate-600
+  }
+
+  .button-secondary {
+    @apply bg-slate-500 text-white hover:bg-slate-400
+  }
+
+  .form {
+    @apply grid gap-2 w-full sm:gap-3
+  }
+
+  .form-group {
+    @apply grid gap-1 w-full
+  }
+
+  .form-group-label {
+    @apply font-medium
+  }
+
+  .input {
+    @apply w-full py-2 px-3 bg-white border-2 border-slate-400 rounded hover:border-slate-600 focus:border-amber-400 transition-all
+  }
+}
