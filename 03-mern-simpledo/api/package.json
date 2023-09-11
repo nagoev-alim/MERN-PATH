@@ -1,0 +1,39 @@
+{
+  "name": "npp-mern-todo-api",
+  "version": "1.0.0",
+  "description": "MERN App",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "server": "nodemon src/index.js",
+    "postbuild": ""
+  },
+  "keywords": [
+    "mern",
+    "express",
+    "react",
+    "mongo",
+    "node"
+  ],
+  "author": "Alim Nagoev | https://github.com/nagoev-alim",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.8.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.1",
+    "shortid": "^2.2.16"
+  },
+  "bin": {
+    "execute": "src/index.js"
+  }
+}

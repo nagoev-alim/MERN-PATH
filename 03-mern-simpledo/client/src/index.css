@@ -1,0 +1,174 @@
+/* =============================
+📦 Font Family
+============================= */
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
+
+/* =============================
+📣 RESET
+============================= */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: revert;
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+pre {
+  all: revert;
+}
+
+::placeholder {
+  color: unset;
+}
+
+::marker {
+  content: "";
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+  all: revert;
+}
+
+
+/* =============================
+📣 GLOBAL
+============================= */
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+html, body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+#root,
+#app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* =============================
+📦 Tailwind directives
+============================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .layout {
+    @apply min-h-screen grid grid-rows-[auto_1fr_auto] font-sans text-sm md:text-lg
+  }
+
+  .header {
+    @apply grid gap-2 justify-items-center p-4 border-b-2 border-b-neutral-200 sm:flex sm:items-center sm:justify-between
+  }
+
+  .footer {
+    @apply grid gap-2 justify-items-center p-2 md:p-3.5 text-white bg-neutral-800
+  }
+
+  .logo {
+    @apply flex items-center gap-1 font-bold text-lg
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-1 py-1.5 px-4 font-bold border-2 border-neutral-900 rounded-sm cursor-pointer transition-all hover:scale-[1.01] disabled:pointer-events-none disabled:opacity-60
+  }
+
+  .btn-primary {
+    @apply bg-neutral-900 text-white
+  }
+
+  .form {
+    @apply grid gap-2 w-full m-auto sm:gap-3
+  }
+
+  .form-group {
+    @apply grid gap-1
+  }
+
+  .form-group-label {
+    @apply font-semibold
+  }
+
+  .input {
+    @apply py-1.5 px-3 border-2 border-neutral-300 rounded-sm sm:py-2 hover:border-neutral-600 transition-all disabled:pointer-events-none disabled:bg-neutral-100
+  }
+
+  .error-message {
+    @apply font-semibold text-xs text-red-500
+  }
+
+  .checkbox {
+    @apply w-[40px] h-[40px] inline-flex justify-center items-center flex-shrink-0 border-2 border-neutral-900 rounded-sm
+  }
+}
