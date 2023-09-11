@@ -1,0 +1,24 @@
+{
+  "name": "npp-mern-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start --prefix api",
+    "server": "npm run server --prefix api",
+    "dev": "concurrently \"cd api && npm run server\" \"cd client && npm run dev\"",
+    "postbuild": "npm install && npm install --prefix api && npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [
+    "mern",
+    "express",
+    "react",
+    "mongo",
+    "node"
+  ],
+  "author": "Alim Nagoev | https://github.com/nagoev-alim",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
